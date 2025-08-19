@@ -1,33 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Form </title>
 </head>
 <body>
-    <h1 > Form </h1>
-    <form >
-        <div><label for="name">Full Name</label>
-        <input id="name" placeholder="Name" type="text"> 
-        </input><br><br>
-        </div>
-        <div><label for="email">Email</label>
-        <input id="email" placeholder="Email" type="email"> 
-        </input> <br><br>
-        </div>
-        <div><label for="password">Password</label>
-        <input id="password" placeholder="Password" type="password"> 
-        </input><br><br>
-        </div>
-         <label>Gender</label>
-        <div class="inline" role="radiogroup" aria-label="Gender">
-          <label><input type="radio" name="gender" value="female" /> Female</label>
-          <label><input type="radio" name="gender" value="male" /> Male</label>
-          <label><input type="radio" name="gender" value="other" /> Other</label>
-        </div><br>
-        
-        <button type="submit" style="background-color:yellow; ">Submit</button>
-    </form>
+  <h1>Google Form </h1>
+
+  <form action="#" method="post">
+    <!-- Section 1: Personal Information -->
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone" placeholder="e.g. 9876543210"><br>
+    </fieldset>
+
+    <!-- Section 2: Preferences -->
+    <fieldset>
+      <legend>Preferences</legend>
+
+      <p>Choose your course:</p>
+      <label><input type="radio" name="course" value="HTML" required> HTML</label><br>
+      <label><input type="radio" name="course" value="CSS"> CSS</label><br>
+      <label><input type="radio" name="course" value="JavaScript"> JavaScript</label><br>
+      <label><input type="radio" name="course" value="Python"> Python</label><br><br>
+
+      <p>Select your interests:</p>
+      <label><input type="checkbox" name="interest" value="Web Development"> Web Development</label><br>
+      <label><input type="checkbox" name="interest" value="AI"> Artificial Intelligence</label><br>
+      <label><input type="checkbox" name="interest" value="Data Science"> Data Science</label><br>
+      <label><input type="checkbox" name="interest" value="Cyber Security"> Cyber Security</label>
+    </fieldset>
+
+    <!-- Section 3: Additional Info -->
+    <fieldset>
+      <legend>Additional Information</legend>
+
+      <label for="age">Age:</label><br>
+      <input type="number" id="age" name="age" min="10" max="100" placeholder="Enter your age"><br><br>
+
+      <label for="comments">Why do you want to join?</label><br>
+      <textarea id="comments" name="comments" rows="5" cols="40" placeholder="Write your reason here..."></textarea>
+    </fieldset>
+
+    <!-- Section 4: Confirmation -->
+    <fieldset>
+      <legend>Confirmation</legend>
+      <label><input type="checkbox" name="confirm" required> I confirm the information provided is correct.</label>
+    </fieldset>
+
+    <br>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
 </body>
 </html>
